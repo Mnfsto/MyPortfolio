@@ -1,0 +1,507 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html, body {
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* CLEAR FIX*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.2;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; /*Firefox 1-3*/
+  -webkit-box-sizing: border-box; /* Safari */
+}
+
+@font-face {
+  font-family: "LatoWebBlack";
+  src: url("fonts/Lato-Black.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Black.woff2") format("woff2"), url("fonts/Lato-Black.woff") format("woff"), url("fonts/Lato-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebBlack";
+  src: url("fonts/Lato-BlackItalic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-BlackItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-BlackItalic.woff2") format("woff2"), url("fonts/Lato-BlackItalic.woff") format("woff"), url("fonts/Lato-BlackItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebBold";
+  src: url("fonts/Lato-Bold.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Bold.woff2") format("woff2"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebBold";
+  src: url("./fonts/Lato-BoldItalic.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/Lato-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./fonts/Lato-BoldItalic.woff2") format("woff2"), url("./fonts/Lato-BoldItalic.woff") format("woff"), url("./fonts/Lato-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebHairline";
+  src: url("fonts/Lato-Hairline.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Hairline.woff2") format("woff2"), url("fonts/Lato-Hairline.woff") format("woff"), url("fonts/Lato-Hairline.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebHairline";
+  src: url("fonts/Lato-HairlineItalic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-HairlineItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-HairlineItalic.woff2") format("woff2"), url("fonts/Lato-HairlineItalic.woff") format("woff"), url("fonts/Lato-HairlineItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebHeavy";
+  src: url("fonts/Lato-Heavy.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Heavy.woff2") format("woff2"), url("fonts/Lato-Heavy.woff") format("woff"), url("fonts/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebHeavy";
+  src: url("fonts/Lato-HeavyItalic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-HeavyItalic.woff2") format("woff2"), url("fonts/Lato-HeavyItalic.woff") format("woff"), url("fonts/Lato-HeavyItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWeb";
+  src: url("fonts/Lato-Italic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Italic.woff2") format("woff2"), url("fonts/Lato-Italic.woff") format("woff"), url("fonts/Lato-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebLight";
+  src: url("fonts/Lato-Light.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Light.woff2") format("woff2"), url("fonts/Lato-Light.woff") format("woff"), url("fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebLight";
+  src: url("fonts/Lato-LightItalic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-LightItalic.woff2") format("woff2"), url("fonts/Lato-LightItalic.woff") format("woff"), url("fonts/Lato-LightItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebMedium";
+  src: url("fonts/Lato-Medium.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Medium.woff2") format("woff2"), url("fonts/Lato-Medium.woff") format("woff"), url("fonts/Lato-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebMedium";
+  src: url("fonts/Lato-MediumItalic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-MediumItalic.woff2") format("woff2"), url("fonts/Lato-MediumItalic.woff") format("woff"), url("fonts/Lato-MediumItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWeb";
+  src: url("fonts/Lato-Regular.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebSemibold";
+  src: url("fonts/Lato-Semibold.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Semibold.woff2") format("woff2"), url("fonts/Lato-Semibold.woff") format("woff"), url("fonts/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebSemibold";
+  src: url("fonts/Lato-SemiboldItalic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-SemiboldItalic.woff2") format("woff2"), url("fonts/Lato-SemiboldItalic.woff") format("woff"), url("fonts/Lato-SemiboldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebThin";
+  src: url("fonts/Lato-Thin.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Thin.woff2") format("woff2"), url("fonts/Lato-Thin.woff") format("woff"), url("fonts/Lato-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "LatoWebThin";
+  src: url("fonts/Lato-ThinItalic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-ThinItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-ThinItalic.woff2") format("woff2"), url("fonts/Lato-ThinItalic.woff") format("woff"), url("fonts/Lato-ThinItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 3.2em;
+  margin-bottom: 8px;
+  color: #0A2D32;
+}
+
+p {
+  padding-bottom: 8px;
+  color: #1A1A1A;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+ul {
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+strong {
+  font-family: LatoWebBold;
+}
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  background-color: #e5e5e5;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.myWork h2, .aboutMe h2, .contactMe h2 {
+  padding-top: 64px;
+  padding-bottom: 48px;
+  font-size: 4.5em;
+  font-family: Lato, Helvetica, sans-serif;
+  text-align: center;
+}
+
+section {
+  padding: 80px 42px;
+}
+
+header {
+  position: relative;
+  margin: auto;
+  background: #1BDE7F;
+}
+
+.head {
+  padding-right: 42px;
+  padding-left: 42px;
+  height: 100px;
+  background-image: linear-gradient(to right, rgb(27, 222, 95) 20%, rgb(27, 222, 127) 100%);
+}
+
+.logo {
+  display: inline-block;
+  margin-top: 20px;
+}
+.logo a {
+  width: 110px;
+  height: 60px;
+  float: left;
+}
+.logo img {
+  float: left;
+}
+.logo a span {
+  float: left;
+  clear: left;
+}
+
+nav {
+  float: right;
+  font-size: 24pt;
+  margin-top: 30px;
+  position: relative;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #2C3136;
+  text-decoration: none;
+  height: 20px;
+}
+nav li {
+  display: inline-block;
+  margin-left: 42px;
+}
+nav li:hover {
+  border-bottom: 2px solid #2C3136;
+  padding-bottom: 30px;
+  box-sizing: content-box;
+}
+
+.whoami {
+  padding-right: 42px;
+  padding-left: 42px;
+  background-image: linear-gradient(to right, rgb(27, 222, 95) 20%, rgb(27, 222, 127) 100%);
+  background-color: #19CE76;
+}
+.whoami > div {
+  float: left;
+  visibility: hidden;
+}
+.whoami h2 {
+  font-size: 2em;
+}
+.whoami img {
+  margin-top: 40px;
+  width: 352px;
+  height: 91px;
+}
+.whoami img[alt=device] {
+  margin-top: 110px;
+  float: right;
+  width: 601px;
+  height: 449px;
+  visibility: hidden;
+}
+
+.afterLine {
+  background-color: white;
+  height: 265px;
+}
+.afterLine svg {
+  width: 100%;
+  height: 125px;
+}
+
+.aboutMe {
+  position: relative;
+  background-image: linear-gradient(to right, rgb(247, 199, 38) 20%, rgb(247, 216, 38) 100%);
+  background-color: #f7c726;
+}
+.aboutMe h3 {
+  font-size: 4.5em;
+  text-align: center;
+  padding-bottom: 80px;
+}
+.aboutMe p {
+  font-size: 2.65em;
+  font-family: Lato, Helvetica, sans-serif;
+  padding: 110px 74px;
+  padding-left: 0;
+}
+
+.mySkillsWraper {
+  height: 942px;
+  background-image: url(./image/sunShine.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 100% auto;
+}
+
+.iDo {
+  height: 320px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 80px;
+}
+.iDo img {
+  margin: 37px 74px;
+  width: 246px;
+  height: 246px;
+  float: left;
+}
+
+figure {
+  width: 30.7692307692%; /*320x1040*/
+  float: left;
+  padding-left: 3.8461538462%;
+}
+
+.imgWraper {
+  width: 86.9565217391%; /*1040px*/
+  margin: 0 4.9038461538%;
+}
+.imgWraper figure:first-child {
+  padding-left: 0;
+}
+.imgWraper figure:nth-child(4) {
+  padding-left: 0;
+}
+
+.myWork {
+  position: relative;
+  padding-bottom: 124px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 100% auto;
+  background-image: linear-gradient(to right, rgb(255, 80, 62) 20%, rgb(255, 94, 62) 100%);
+  background-image: url(./image/particles.svg);
+  background-color: rgb(255, 80, 62);
+}
+.myWork figure img {
+  border-radius: 30px;
+  margin-top: 16px;
+}
+
+figcaption {
+  padding-top: 64px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.contactMe {
+  padding-top: 0;
+  background-color: #ffffff;
+}
+.contactMe h2 {
+  text-align: left;
+}
+
+.contactWraper {
+  width: 50%;
+  float: left;
+}
+
+input {
+  width: 80%;
+  height: 68px;
+  padding-left: 24px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ffffff;
+  display: block;
+  border-width: 0;
+  border-radius: 8px;
+  background-color: #2C3136;
+}
+input[type=submit] {
+  width: 220px;
+  padding-left: 0;
+  background-image: linear-gradient(to right, rgb(27, 222, 95) 20%, rgb(27, 222, 127) 100%);
+}
+
+.socWraper {
+  float: right;
+  width: 50%;
+}
+.socWraper a {
+  float: left;
+  display: inline-block;
+  margin-left: 8px;
+}
+.socWraper img {
+  width: 100%;
+  height: 64px;
+}
+
+footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear: both;
+  margin: auto;
+  height: 36px;
+  padding: 25px;
+  background-color: #081825;
+}
+footer p {
+  font-size: 1.5em;
+  margin: auto;
+  color: #fff;
+  width: 356px;
+}
+footer div {
+  float: right;
+}
+
+/*# sourceMappingURL=style.css.map */

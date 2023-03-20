@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<title>Maxim portfolio by Maxim Titov</title>
+	<meta name="description" content="Graphic designer and front-end developer.">
+
+	<link href="reset.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="font-awesome.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+
+	<script src="anime.min.js"></script>
+	<script>
+
+
+		//Выежающие элементы в шапке и зум изображений
+        window.onload = function () {
+
+            var device = document.querySelector('#device');
+            var cloud = document.querySelector('#cloud');
+			var imgWork = document.getElementsByClassName('workImg');
+            setTimeout(function (){
+                device.style.visibility = "visible";
+                cloud.style.visibility = "visible";
+            },500);
+
+			var leftAnimation = anime({
+                targets: cloud,
+                translateX: -800,
+                opacity: 0,
+                duration: 2000,
+                delay: 1000,
+                direction: 'reverse',
+                easing: 'easeInOutQuad'
+
+            });
+            var righttAnimation = anime({
+                targets: device,
+                opacity: 0,
+                duration: 4000,
+                delay: 1000,
+                direction: 'reverse',
+                easing: 'easeInOutQuad'
+
+            });
+			function imageScale(event) {
+				var clickImg = event.target;
+				clickImg.style.zIndex = "100";
+                anime({
+                    targets: clickImg,
+                    scale: 1.5,
+                });
+                inner();
+            }
+
+            function imageReScale(event) {
+                var clickImg = event.target;
+                clickImg.style.zIndex = "0"
+                anime({
+                    targets: clickImg,
+                    scale: 1,
+                });
+            }
+
+            for (var i = 0;i<imgWork.length;i++){
+                imgWork[i].onmouseover = imageScale;
+                imgWork[i].onmouseout = imageReScale;
+
+            }
+
+
+
+        };
+	</script>
+
+</head>
+<body>
+	<header>
+		<div class="head clearfix">
+		<div class="logo"><a href="massimo.design">
+	        <img alt="Logo TM" src="./image/logoMassimo.svg"></a>
+        </div>
+	<!--Navigation menu with anchors-->
+		<nav>
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#myWork">Work</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		</div>
+		<!--Head block-->
+		<div class="whoami clearfix">
+            <div id="cloud">
+            <img alt="cloud" src="./image/cloudTM.svg">
+			<h1>Hello, I am Maxim</h1>
+			<h2>Graphic designer and front-end developer.</h2>
+            </div>
+            <img alt="device" id="device" src="./image/deviceTM.svg">
+
+		</div>
+        <div class="afterLine clearfix"><img src="./image/afterLineTM.svg"></div>
+	</header>
+
+	<main>
+	<!--About me Block-->
+			<section class="aboutMe clearfix" >
+				<h2><a name="about">About me</a></h2>
+				<div class="iDo clearfix">
+					<img src="./image/avatar.svg	" alt="avatar Massimo">
+					<p><strong>I design</strong> beutiful digital products and solve a problems.</p>
+				</div>
+	<!--My skills block-->
+				<div class="mySkillsWraper clearfix">
+					<h3>My Skills</h3>
+					<div class="imgWraper">
+						<figure><img src="./image/UX.svg" alt="UI/UX">
+							<figcaption>UI/UX</figcaption>
+						</figure>
+						<figure><img src="./image/graphicDesign.svg" alt="Graphic Design">
+							<figcaption>Graphic Design</figcaption>
+						</figure>
+						<figure><img src="./image/Development.svg" alt="Development">
+							<figcaption>Development</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+		<div class="afterLine clearfix"><img src="./image/afterLineAbout.svg"></div>
+	<!--My work block-->
+			<section class="myWork clearfix">
+				<h2><a name="myWork">My work</a></h2>
+				<div class="imgWraper">
+					<figure class="workImg"><img src="./image/TTGif.gif" alt="3D/Motion">
+					</figure>
+					<figure class="workImg"><img src="./image/ArcadiaGIF_1080.gif" alt="MotionDesign">
+					</figure>
+					<figure class="workImg"><img src="./image/MarSpaceGIF_1080.gif" alt="WebDesign">
+					</figure>
+					<figure class="workImg"><img src="./image/Black_Velvet.jpg" alt="UI/UX">
+					</figure>
+					<figure class="workImg"><img src="./image/imgWork1.svg" alt="Graphic Design">
+					</figure>
+					<figure class="workImg"><img src="./image/imgWork2.svg" alt="Development">
+					</figure>
+				</div>
+			</section>
+			<div class="afterLine clearfix"><img src="./image/afterWork.svg"></div>
+	<!--Contact me Block-->
+			<section class="contactMe clearfix">
+				<div class="contactWraper">
+					<h2><a name="contact">Contact me</a></h2>
+					<fieldset>
+						<!-- Required Fields -->
+						<input type="text" placeholder="Name">
+						<input type="email" placeholder="Email">
+						<input type="text" placeholder="Telephone">
+						<input type="submit" value="Send">
+
+					</fieldset>
+				</div>
+				<div class="socWraper">
+					<h2>Social</h2>
+						<a href="https://www.facebook.com/MastaKilla13/"><img alt="Maxim Facebook" src="./image/iconFacebook.svg"></a>
+						<a href="https://twitter.com/AirMaximillion"><img alt="Maxim Twitter" src="./image/iconTwitter.svg"></a>
+
+				</div>
+			</section>
+	</main>
+	<footer>
+		<p>“Find your self and be free”</p>
+	</footer>
+</body>
+
+</html>
