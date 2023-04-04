@@ -4,7 +4,9 @@
   "description": "Front-End Portfolio",
   "main": "anime.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,12 @@
   },
   "homepage": "https://github.com/Mnfsto/MyPortfolio#readme",
   "dependencies": {
+    "chalk": "^5.2.0",
     "express": "^4.18.2",
     "nodemailer": "^6.9.1",
     "npm": "^9.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
