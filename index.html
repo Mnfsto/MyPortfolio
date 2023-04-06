@@ -128,14 +128,16 @@
 			<section class="contactMe clearfix">
 				<div class="contactWraper">
 					<h2><a name="contact">Contact me</a></h2>
+					<form id="contact-form" method="post" action="/send">
 					<fieldset>
 						<!-- Required Fields -->
-						<input type="text" placeholder="Name">
-						<input type="email" placeholder="Email">
-						<input type="text" placeholder="Telephone">
+						<input type="text" name="name" placeholder="Name" required>
+						<input type="email" name="email" placeholder="Email" required>
+						<input type="tel" name="telephone" placeholder="Telephone" required>
 						<input type="submit" value="Send">
 
 					</fieldset>
+					</form>
 				</div>
 				<div class="socWraper">
 					<h2>Social</h2>
