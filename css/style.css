@@ -355,9 +355,71 @@ nav li:hover {
   visibility: hidden;
 }
 
-.afterLine {
+.waves {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
   background-color: white;
-  height: 265px;
+}
+
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+.afterLine {
+  background-color: #f7c726;
+  height: 124px;
 }
 .afterLine svg {
   width: 100%;
@@ -418,6 +480,18 @@ figure {
   padding-left: 0;
 }
 
+.imgWraper-2 {
+  width: auto;
+  margin: 0 4.9038461538%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.imgWraper-2 figure {
+  padding: 32px;
+  width: auto;
+}
+
 .myWork {
   position: relative;
   padding-bottom: 124px;
@@ -468,6 +542,15 @@ input[type=submit] {
   width: 220px;
   padding-left: 0;
   background-image: linear-gradient(to right, rgb(27, 222, 95) 20%, rgb(27, 222, 127) 100%);
+}
+input[type=submit][type=submit]:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.afterLine-2 {
+  background-color: rgb(255, 80, 62);
+  height: 124px;
 }
 
 .socWraper {
