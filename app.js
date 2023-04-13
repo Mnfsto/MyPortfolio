@@ -82,7 +82,7 @@ const mailer = require('./nodemailer')
 const smtp = require('./config');
 
 const app = express();
-const port = 7000;
+const port = 3000;
 let order = undefined;
 
 app.use(express.static('public'));
