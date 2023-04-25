@@ -3,10 +3,10 @@ const bodyParser = require('body-parser')
 const smtp = {
     host: 'smtp.gmail.com',
     port: 465,
-    user: 'offgamesorg@gmail.com',
-    from: 'offgamesorg@gmail.com',
+    user: 'maximtitov13@gmail.com',
+    from: 'maximtitov13@gmail.com',
     to: 'offgamescyclocross@gmail.com',
-    pass: 'iehoaoobscqvkxik'
+    pass: 'vltlrdrqasrvlono'
 }
 
 module.exports = smtp
